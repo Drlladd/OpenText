@@ -34,10 +34,12 @@ public class ConversationListViewHolder extends ClickableViewHolder<Conversation
         /**
          * As the fragment has not been created yet these need to remain commented for the time being.
          */
-        //rootView = itemView;
+        rootView = itemView;
         recipientView = (TextView) rootView.findViewById(R.id.conversation_list_recipient_name);
         messageSnippet = (TextView) rootView.findViewById(R.id.conversation_list_last_message_snippet);
         lastUpdateDate = (TextView) rootView.findViewById(R.id.conversation_list_last_conversation_update_date);
+
+
 
     }
 }
