@@ -24,7 +24,6 @@ public class ConversationListAdapter extends RecyclerCursorAdapter<ConversationL
         LayoutInflater inflater = LayoutInflater.from(mContext);
         //TODO: create list object view layout resource for conversation list
         View view = inflater.inflate(R.layout.conversation_list_object, null);
-
         ConversationListViewHolder holder = new ConversationListViewHolder(mContext, view);
 
         return holder;
@@ -33,7 +32,7 @@ public class ConversationListAdapter extends RecyclerCursorAdapter<ConversationL
     @Override
     public void onBindViewHolder(ConversationListViewHolder holder, int position) {
         //TODO: currently calling default constructor - Needs replacing.
-        Conversation conversation = new Conversation();
+        Conversation conversation = new Conversation(mContext); //need to set this to default constructor once it's created.
 
         holder.mData = conversation;
         holder.mContext = mContext;
@@ -41,8 +40,16 @@ public class ConversationListAdapter extends RecyclerCursorAdapter<ConversationL
         holder.rootView.setOnClickListener(holder);
 
         //TODO: Set message parameters for each item in the conversation list
+        //set conversation date from last message
+
 
     }
+
+    /*
+    protected Conversation getConversation(int position){
+        mCursor.moveToPosition(position);
+    }
+    */
 
     @Override
     public int getItemCount() {

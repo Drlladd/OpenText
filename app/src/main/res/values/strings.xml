@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OpenText</string>
+    <string name="date_yesterday">Yesterday</string>
 </resources>
