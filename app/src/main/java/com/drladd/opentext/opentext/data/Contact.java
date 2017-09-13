@@ -16,7 +16,11 @@ public class Contact {
 
 
     private Contact(String name, String number){
+        initialiseContact(name, number);
+    }
 
+    private Contact(String number){
+        initialiseContact("", number);
     }
 
     private void initialiseContact(String name, String number){
@@ -32,7 +36,7 @@ public class Contact {
         this.mContactName = mContactName;
     }
 
-    public String getmNumber() {
+    public synchronized String getmNumber() {
         return mNumber;
     }
 
